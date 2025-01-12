@@ -68,10 +68,6 @@ namespace LAB5_MAUI.ViewModels
             Title = "Loading ...";
 
             var data = await _dataRepository.GetBankAsync();
-            foreach (var bank in data)
-            {
-                Console.WriteLine($"Bank ID: {bank.Id}, Name: {bank.Name}, Description: {bank.Description},  Specialization: {bank.Specialization}");
-            }
 
             Banks = data;
             Title = "Number of banks: " + data.Length;
